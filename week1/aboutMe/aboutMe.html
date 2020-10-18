@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+  </head>
+  <style>
+      .list-item {
+          color:red;
+          list-style: none;
+      }
+  </style>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorite food: <span id="fav-food"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+   <script type="text/javascript">  
+       document.body.style.fontFamily = "Arial, sans-serif";
+       const nickname = document.getElementById('nickname');
+       nickname.innerText = "Enwer"
+       const favFood = document.getElementById('fav-food');
+       favFood.innerText = "Polo"
+       const hometown = document.getElementById('hometown');
+       hometown.innerText = "Kashgar"
+
+       const ul = document.getElementsByTagName('ul')[0]
+       for (let i = 0; i < ul.children.length; i++){
+                const li = ul.children[i]
+                li.className += "list-item";
+                // li.classList.add("list-item");
+       }
+
+       const img = document.createElement("img")
+       img.src = "https://imagemagick.org/image/wizard.jpg"
+      document.body.appendChild(img)
+    </script>
+  </body>
+</html>
